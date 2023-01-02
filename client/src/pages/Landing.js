@@ -2,6 +2,8 @@ import React from 'react';
 import { Logo } from '../components/index';
 import main from '../assets/images/main.svg';
 import Wrapper from '../assets/wrappers/LandingPage';
+import { Link } from 'react-router-dom';
+
 const Landing = () => {
   return (
     <Wrapper>
@@ -23,7 +25,9 @@ const Landing = () => {
             scenester meditation freegan church-key narwhal skateboard.
             Skateboard PBR&B meggings keffiyeh mixtape pok pok.
           </p>
-          <button className='btn btn-hero'>Login/Register</button>
+          <Link to='/register' className='btn btn-hero'>
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt='xxx' className='img main-img' />
       </div>
