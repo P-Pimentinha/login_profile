@@ -1,4 +1,4 @@
-import Landing from './pages/Landing';
+import { Landing } from './pages/index';
 import styled from 'styled-components';
 
 function App() {
