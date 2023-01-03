@@ -1,6 +1,6 @@
 import { useReducer, useContext } from 'react';
 import React from 'react';
-import { DISPLAY_ALERT } from './action';
+import { DISPLAY_ALERT, CLEAR_ALERT } from './action';
 
 import reducer from './reducer';
 
@@ -18,6 +18,13 @@ const AppProvider = ({ children }) => {
 
   const displayAlert = () => {
     dispatch({ type: DISPLAY_ALERT });
+    clearAlert();
+  };
+
+  const clearAlert = () => {
+    setTimeout(() => {
+      dispatch({ type: CLEAR_ALERT });
+    }, 3000);
   };
 
   return (
