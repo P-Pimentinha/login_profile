@@ -15,7 +15,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon server"
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\""
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,8 @@
     "url": "https://github.com/P-Pimentinha/login_profile/issues"
   },
   "homepage": "https://github.com/P-Pimentinha/login_profile#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
