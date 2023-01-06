@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Logo, FormRow, Alert } from '../components/index';
 import { useAppContext } from '../context/appContext';
 import { useNavigate } from 'react-router-dom';
+import { LOGIN_USER_BEGIN } from '../context/action';
 
 const initialState = {
   name: '',
@@ -14,7 +15,7 @@ const initialState = {
 const Register = () => {
   const [values, setValues] = useState(initialState);
   const navigate = useNavigate();
-  const { user, isLoading, showAlert, displayAlert, registerUser } =
+  const { user, isLoading, showAlert, displayAlert, registerUser, loginUser } =
     useAppContext();
 
   const handleChange = (e) => {
@@ -31,7 +32,7 @@ const Register = () => {
 
     const currentUser = { name, email, password };
     if (isMember) {
-      console.log('already a member');
+      loginUser(currentUser);
     } else {
       registerUser(currentUser);
     }
