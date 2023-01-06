@@ -36,6 +36,7 @@ const reducer = (state, action) => {
     return {
       ...state,
       token: action.payload.token,
+
       user: action.payload.user,
       userLocation: action.payload.user.location,
       jobLocation: action.payload.user.location,

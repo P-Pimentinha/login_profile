@@ -1,6 +1,5 @@
 import { Landing, Error, Register, Dashboard } from './pages/index';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import styled from 'styled-components';
 
 function App() {
   return (
