@@ -9,6 +9,7 @@
     "mongoose": "^6.8.2",
     "morgan": "^1.10.0",
     "normalize.css": "^8.0.1",
+    "react-icons": "^4.7.1",
     "validator": "^13.7.0"
   },
   "name": "login_profile",
