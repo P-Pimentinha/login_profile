@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { Logo, FormRow, Alert } from '../components/index';
 import { useAppContext } from '../context/appContext';
 import { useNavigate } from 'react-router-dom';
-import { LOGIN_USER_BEGIN } from '../context/action';
 
 const initialState = {
   name: '',

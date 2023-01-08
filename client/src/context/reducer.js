@@ -45,7 +45,7 @@ const reducer = (state, action) => {
 
       user: action.payload.user,
       userLocation: action.payload.user.location,
-      jobLocation: action.payload.user.location,
+
       isLoading: false,
       showAlert: true,
       alertType: 'success',
@@ -77,7 +77,7 @@ const reducer = (state, action) => {
 
       user: action.payload.user,
       userLocation: action.payload.user.location,
-      jobLocation: action.payload.user.location,
+
       isLoading: false,
       showAlert: true,
       alertType: 'success',
@@ -108,7 +108,6 @@ const reducer = (state, action) => {
       user: null,
       token: null,
       userLocation: null,
-      jobLocation: null,
     };
   }
 

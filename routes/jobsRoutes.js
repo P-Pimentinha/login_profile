@@ -1,15 +1,15 @@
 import {
-  createJob,
-  deleteJob,
-  getAllJobs,
-  updateJob,
+  createBar,
+  deleteBar,
+  getAllBars,
+  updateBar,
   showStats,
-} from '../controllers/jobsController.js';
+} from '../controllers/barsController.js';
 import express from 'express';
 const router = express.Router();
 
-router.route('/').post(createJob).get(getAllJobs);
+router.route('/').post(createBar).get(getAllBars);
 router.route('/stats').get(showStats);
-router.route('/:id').delete(deleteJob).patch(updateJob);
+router.route('/:id').delete(deleteBar).patch(updateBar);
 
 export default router;
